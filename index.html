@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <script src="index.js" defer></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    
+    <title>Encriptador</title>
+</head>
+<body>
+    <header class="logotipo">
+        <img src="imagenes/Logo.png" class="logo" alt="Logotipo alura">
+    </header>
+
+    <main>
+        <div class="mensaje-usuario">
+            <textarea name="mensaje-usuario" cols="30" rows="10" id="input-original" spellcheck="false" placeholder="Ingrese texto aquí"></textarea>
+            <!--<input class="input-original" spellcheck="false" placeholder="Ingrese texto aquí" type="text" name="text">-->
+            <p>&#10071; Solo letras minúsculas y sin acentos</p>
+        </div>
+
+        <div class="submit">
+            <button id="boton-encriptar" onclick="encriptarTexto()">Encriptar</button>
+            <button id="boton-desencriptar" onclick="desencriptarTexto()">Desencriptar</button>
+            
+        </div>
+
+        <div class="resultado">
+            <textarea name="consola-resultado" cols="30" rows="10" id="resultado-consola" readonly placeholder="Ningun mensaje fue encontrado Ingrese el texto que desea encriptar o desencriptar"></textarea>
+            <!--<input  class="resultado-consola" readonly placeholder="Ningun mensaje fue encontrado Ingrese el texto que desea encriptar o desencriptar" type="text">-->
+            <div class="imagen-resultado">
+                <img src="imagenes/Muñeco.png" alt="Persona viendo un diamante por una lupa" id="imagen-sobre-resultado">
+                <button id="boton-copiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Encriptador creado por Juan José Romero Xopa - Challenge ONE</p>
+        <a href="https://www.linkedin.com/in/juanjoseromeroxopa"><img src="imagenes/linkedin.png" class="imagen-footer" alt="Logotipo de LinkedIn"></a>
+        <a href="https://github.com/jossxopa"><img src="imagenes/github.png" class="imagen-footer" alt="Logotipo de Github"></a>
+    </footer>
+    
+</body>
+</html>
