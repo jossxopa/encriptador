@@ -28,8 +28,8 @@ body {
     /* Mensaje que el usuario va a escribir */
 #input-original {
     width: 650px;
-    height: 100vh;
-    margin: 120px;
+    height: 75vh;
+    margin: 90px 75px 0px 75px;
     text-align: center;
     background: none;
     border: none;
@@ -58,13 +58,13 @@ button {
     border-radius: var(--borde-redondo);
 }
 
-#boton-encriptar {
+#boton-encriptar, #btn-cerrarModal {
     background-color: var(--azul2);
     color: white;
     border: none;
 }
 
-#boton-encriptar:hover {
+#boton-encriptar:hover, #btn-cerrarModal:hover {
     font-size: 25px;
     background: rgba(10, 56, 113, 0.6);
     border: none;
@@ -89,6 +89,25 @@ textarea, button {
    border: none;
    outline: none;  /*el efecto visual predeterminado de resaltado del contorno que aparece al enfocar un campo de entrada (como un input) se eliminará.*/
 }
+/* MODAL */
+
+#modal {
+    text-align: center;
+    padding: 30px 40px;
+    max-width: 60ch;
+    background: var(--azul1);
+    border-radius: var(--borde-redondo);
+    border: none;
+    outline: none;
+    
+}
+#modal h1 {
+    margin: 10px;
+    font-weight: bold;
+}
+#modal::backdrop { /*Estiliza el fondo del modal*/
+    background: rgba(0,0,0,.60);
+}
 
 
 /*.resultado {
@@ -98,9 +117,10 @@ textarea, button {
 #resultado-consola{
     position: absolute;
     width: 400px;
-    height: 120vh;
-    left: 900px;
+    height: 75vh;
+    left: 800px;
     top: 40px;
+    padding: 40px;
     background: #FFFFFF;
     resize: none;
     /* shadow */

@@ -30,8 +30,12 @@
         <div class="submit">
             <button id="boton-encriptar" onclick="encriptarTexto()">Encriptar</button>
             <button id="boton-desencriptar" onclick="desencriptarTexto()">Desencriptar</button>
-            
         </div>
+        <dialog id="modal">
+            <h1>Recuerda:</h1>
+            <p>No se puede utilizar acentos, mayúsculas o algún tipo de signos</p>
+            <button id="btn-cerrarModal">cerrar</button>
+        </dialog>
 
         <div class="resultado">
             <textarea name="consola-resultado" cols="30" rows="10" id="resultado-consola" readonly placeholder="Ningun mensaje fue encontrado Ingrese el texto que desea encriptar o desencriptar"></textarea>
