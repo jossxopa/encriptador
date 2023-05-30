@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: var(--azul1);
+    background: linear-gradient(to bottom right, #5b7fff, #33ccfc);
 }
     /* Logotipo */
 .logo {
@@ -27,9 +27,9 @@ body {
 }
     /* Mensaje que el usuario va a escribir */
 #input-original {
-    width: 300px; /*650*/
+    width: 650px; /*300*/
     height: 50vh; /*55*/
-    margin: 90px 75px 0px 75px;
+    margin: 99px 75px 0px 90px;
     text-align: center;
     background: none;
     border: none;
@@ -52,6 +52,7 @@ body {
 button {
     position: relative;
     display: inline;
+    cursor: pointer;
     width: 200px;
     height: 50px;
     margin: 10px;
@@ -118,7 +119,7 @@ textarea, button {
 #resultado-consola{
     position: absolute;
     width: 365px;
-    height: 65vh;
+    height: 70vh;/*65vh;*/
     /*width: 400px;
     height: 75vh;*/
     left: 800px;
@@ -143,9 +144,18 @@ textarea, button {
 
 #imagen-sobre-resultado {
     position: absolute;
-    top: 200px;
-    left: 850px;
+    width: 250px;
+    top: 225px;/*200px;*/
+    left: 885px; /*850px;*/
     z-index: 2; 
+}
+
+.boton-copiar-resultado {
+    position: relative;
+    width: 365px;
+    left: 930px;
+    bottom: 50px;
+    z-index: 3;
 }
 
 footer {
@@ -170,12 +180,105 @@ footer p {
 }
 
 @media screen and (max-width: 850px) {
+    
+    #input-original {
+        position: relative;
+        display: block;
+        top: 10px;
+        width: 250px;
+        right: 50px;
+        margin-bottom: 15px;
+    }
 
-    #mensaje-usuario, #submit, .resultado {
+    .mensaje-usuario p, .submit {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    #resultado-consola {
+        position:relative;
+        width: 250px;
+        padding: 10px;
+        top: 0;
+        left: 40px;
+        height: 50vh;
+    }
+
+    #imagen-resultado {
+        display: none;
+    }
+
+    #boton-copiar {
+        position: absolute;
+        right: 1000px;
+        top: 50px;
+    }
+
+    footer {
+        position: relative;
+        top: 100px;
+        margin-top: 20opx;
+    }
+
+    /* #input-original, .resultado, #resultado-consola, #imagen-sobre-resultado {
+        background-color: black;
+        position: fixed;
+        position: relative;
+        width: 100%;
+        left: 200px;
+     }
+
+        /*position: inherit; revert o static, sticky tambien funcionan*/
+       /* width: 500px;
+        height: 600px;
+        margin: 100px 30px 0px 50px;
+        padding: 20px;
+    }
+
+    .submit, .mensaje-usuario p {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        padding:  15px;
+
+    }
+
+    #resultado-consola {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    }
+
+    /*header.logotipo {
+        position: fixed;
+        margin: 500px 10px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 20px;
+        background: red;
+
+    }*/
+
+   
+
+    /*.mensaje-usuario, .submit, .resultado, #resultado-consola, .mensaje-usuario  {
+        display: flex;
+        margin: 0;
+        width: auto;
+       background: red;
         display: block;
         width: auto;
         margin: 20px;
         width: calc(100% - 40px);
         
     }
-}
+
+    #input-original, #resulado-consola {
+        background: wheat;
+        display: block;*/
+    }

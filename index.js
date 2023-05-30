@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 })
 
+
 /* Copiar texto */ 
 
 function copiarTexto () {
@@ -81,6 +82,26 @@ function copiarTexto () {
   copyText.select();
 
   document.execCommand("copy");
-    alert("Texto copiado");
-  
+    alert("Texto copiado");   
 }
+
+//Ocultar elementos
+
+function ocultarElementos () {
+ let botonEncriptar = document.getElementById("boton-encriptar");
+  botonEncriptar.addEventListener("click", () => {
+    let ocultarImagen = document.getElementById("imagen-sobre-resultado");
+    //let imagenActual = ocultarImagen.style.display; /*funciona si le ponemos despues del "display = "none" pero ya no se volvería a ver la imagen luego de ejecutar que se oculte*/
+
+    ocultarImagen.style.display = "none";
+    
+    /*if (imagenActual === "none") {  Si la imagen esta oculta vamos a mostrarla // Esta condición si sirve, pero lo que hace es que si nuevamente le damos click al boton "encriptar" aparece y desaparece la imagen.*/
+     /* ocultarImagen.style.display = "block"; // Con block se muestra
+    } else { /*Si esta visible, pues la ocultamos//
+      ocultarImagen.style.display = "none"
+    }*/
+  });
+
+}
+
+ocultarElementos();
